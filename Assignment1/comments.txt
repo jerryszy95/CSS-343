@@ -1,0 +1,3 @@
+1.Secret number: 1010
+2.Hours: 9 hours ti complete ass1
+3.comments: None

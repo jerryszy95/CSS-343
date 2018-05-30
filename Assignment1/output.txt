@@ -1,0 +1,40 @@
+shen95@uw1-320-01:~$ g++ -std=c++14 -g -Wall -Wextra ass1.cpp turtleprogram.cpp -o ass1
+shen95@uw1-320-01:~$ script output.txt
+Script started, file is output.txt
+shen95@uw1-320-01:~$ g++ -std=c++14 -g -Wall -Wextra ass1.cpp turtleprogram.cpp -o ass1
+shen95@uw1-320-01:~$ valgrind ./ass1
+==28450== Memcheck, a memory error detector
+==28450== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==28450== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==28450== Command: ./ass1
+==28450== 
+tp1: []
+tp2: [F 10]
+tp1 now as tp2+tp3: [F 10 R 90]
+tp1 now as tp2 * 3: [F 10 F 10 F 10]
+tp4 is a copy of tp1: [F 10 F 10 F 10]
+tp5: [F 10]
+tp2 and tp5 are == to each other: true
+tp2 and tp3 are != to each other: true
+index 0 of tp2 is F
+tp2 after 2 calls to setIndex: [R 90]
+tp2 and tp3 are == to each other: true
+tp2 now as tp2+tp5: [R 90 F 10]
+tp5 now as tp5*5: [F 10 F 10 F 10 F 10 F 10]
+Done.
+==28450== 
+==28450== HEAP SUMMARY:
+==28450==     in use at exit: 72,704 bytes in 1 blocks
+==28450==   total heap usage: 35 allocs, 34 frees, 79,432 bytes allocated
+==28450== 
+==28450== LEAK SUMMARY:
+==28450==    definitely lost: 0 bytes in 0 blocks
+==28450==    indirectly lost: 0 bytes in 0 blocks
+==28450==      possibly lost: 0 bytes in 0 blocks
+==28450==    still reachable: 72,704 bytes in 1 blocks
+==28450==         suppressed: 0 bytes in 0 blocks
+==28450== Rerun with --leak-check=full to see details of leaked memory
+==28450== 
+==28450== For counts of detected and suppressed errors, rerun with: -v
+==28450== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+shen95@uw1-320-01:~$ 
